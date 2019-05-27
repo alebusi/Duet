@@ -1,0 +1,45 @@
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin: 0;
+}
+
+#pause {
+	position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 15px;
+    background-color: #ff674d;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#pause:hover {
+	transform: scale(1.3);
+}
+
+#score-board {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+tr {
+	transition: 300ms;
+	background-color: #7788d9;
+}
+
+td {
+	padding: 10px;
+	border: 1px solid #fff;
+	font-size: 1.3em;
+	color: #fff;
+	width: 80px;
+}
