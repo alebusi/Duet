@@ -30,6 +30,7 @@ var Game = function() {
 		body.addEventListener('keyup', self.move);
 		body.addEventListener('touchstart', self.move);
 		body.addEventListener('touchend', self.move);
+		body.addEventListener('touchcancel', self.move);
 		
 		deg = 0;
 		self.deg_jump = 1;
@@ -101,14 +102,18 @@ var Game = function() {
 		if (evt.type != 'keydown' && evt.type != 'keyup'){
 			if (evt.type == 'touchstart') {
 				var func = evt.touches[0].clientX < vw / 2 ? self.move_left : self.move_right
-				start = setInterval(function() {
+				try {clearInterval(touch);}
+				catch{}
+				touch = setInterval(function() {
 					func();
 					wBall.rotate();
 					bBall.rotate();
 				}, 5);
 			}
-			else if (evt.type == 'touchend') {
-				clearInterval(start);
+			else {
+				try {clearInterval(touch);}
+				catch{}
+				clearInterval(touch);
 			}
 		}
 		else {
@@ -121,7 +126,7 @@ var Game = function() {
 						var func = self.move_left;
 					else if (evt.keyCode == 39)
 						var func = self.move_right;
-					start = setInterval(function() {
+					mouse = setInterval(function() {
 						func();
 						wBall.rotate();
 						bBall.rotate();
@@ -130,7 +135,7 @@ var Game = function() {
 			}
 			else {
 				kd = false;
-				try {clearInterval(start);}
+				try {clearInterval(mouse);}
 				catch{}
 			}
 		}
@@ -152,7 +157,9 @@ var Game = function() {
 		this.ongoing = false;
 		clearInterval(hurdle_factory);
 		clearInterval(painting);
-		try{clearInterval(start);}
+		try{clearInterval(touch);}
+		catch{}
+		try{clearInterval(mouse);}
 		catch{}
 		if (self.game_over) {
 			self.canvas.style.display = 'none';
@@ -349,7 +356,6 @@ function toggle(evt) {
 		pause.innerHTML = 'Resume';
 	}
 	else {
-		console.log('Caliing from 2');
 		game.resume();
 		pause.innerHTML = 'Pause';
 	}
