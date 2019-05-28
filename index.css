@@ -4,7 +4,7 @@ body {
 	margin: 0;
 }
 
-#pause {
+#pause, #show, #info {
 	position: fixed;
     right: 20px;
     top: 20px;
@@ -18,14 +18,19 @@ body {
     transition: 0.3s;
 }
 
-#pause:hover {
+#pause:hover{
 	transform: scale(1.3);
+}
+
+#show {
+	left: 20px;
 }
 
 #score-board {
 	position: fixed;
 	left: 20px;
 	top: 20px;
+	transition: 0.3s;
 }
 
 table {
@@ -42,4 +47,30 @@ td {
 	font-size: 1.3em;
 	color: #fff;
 	width: 80px;
+}
+
+#info {
+	left: 20px;
+	top: 85px;
+	padding: 0;
+	background: none;
+	transition: 0.3s;
+}
+
+#info div div{
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+#info div span {
+	position: relative;
+	left: 15px;
+	top: -14px;
+}
+
+button:focus {
+	outline: 0!important
 }
