@@ -395,8 +395,8 @@ class Game {
 		try{clearInterval(this.mouse);}
 		catch{}
 		if (this.game_over) {
-			this.canvas.style.display = 'none';
 			/*
+			this.canvas.style.display = 'none';
 			var sure = confirm('Do you want to restart?');
 			if (sure) {
 				this.init();
