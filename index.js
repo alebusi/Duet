@@ -238,7 +238,7 @@ class Game {
 	}
 
 	init() {
-		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#000000');
+		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#ffffff');
 		this.wBall = new Circle(this.orbit.cx - this.orbit.rad, this.orbit.cy, 20, 180, '#fbbc05');
 		this.bBall = new Circle(this.orbit.cx + this.orbit.rad, this.orbit.cy, 20, 0, '#FF0000');
 		window.balls = [this.wBall, this.bBall];
