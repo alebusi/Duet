@@ -238,7 +238,7 @@ class Game {
 	}
 
 	init() {
-		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#ffffff');
+		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#000000');
 		this.wBall = new Circle(this.orbit.cx - this.orbit.rad, this.orbit.cy, 20, 180, '#fbbc05');
 		this.bBall = new Circle(this.orbit.cx + this.orbit.rad, this.orbit.cy, 20, 0, '#FF0000');
 		window.balls = [this.wBall, this.bBall];
@@ -414,7 +414,10 @@ class Game {
 		if (this.game_over) {
 			this.init();
 			this.draw();
-			this.start();
+			/* this.start(); */
+			setTimeout(function() {
+				self.start();
+			}, 3000);
 		}
 		else if (!this.ongoing) {
 			setTimeout(function() {
