@@ -9,9 +9,9 @@ body {
 }
 
 #pause, #show, #info {
-	position: fixed;
+    position: fixed;
     right: 20px;
-    top: 20px;
+    top: 90vh;
     padding: 10px 15px;
     background-color: #ff674d;
     border: none;
