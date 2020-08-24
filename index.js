@@ -192,7 +192,7 @@ class Painter {
 			var x = Math.random() * 200;
 			var width = 80 + Math.random() * 40;
 			hurdles.push(new Hurdle(x, width, '1c3a56', window.vw, window.vh));
-		}, 1000); /* - game.speed * 200); */
+		}, 1000 - game.speed * 200);
 	}
 
 	create_powerups() {
@@ -384,7 +384,7 @@ class Game {
 		this.painter.create_powerups();
 		this.painting = setInterval(function() {
 			self.painter.draw();
-		}, 50 - this.speed);
+		}, 30 - this.speed);
 	}
 	stop() {
 		this.ongoing = false;
