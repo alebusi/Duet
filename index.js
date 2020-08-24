@@ -238,7 +238,7 @@ class Game {
 	}
 
 	init() {
-		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#31bbfc');
+		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#ffffff');
 		this.wBall = new Circle(this.orbit.cx - this.orbit.rad, this.orbit.cy, 20, 180, '#ffffff');
 		this.bBall = new Circle(this.orbit.cx + this.orbit.rad, this.orbit.cy, 20, 0, '#FF0000');
 		window.balls = [this.wBall, this.bBall];
@@ -396,6 +396,7 @@ class Game {
 		catch{}
 		if (this.game_over) {
 			this.canvas.style.display = 'none';
+			/*
 			var sure = confirm('Do you want to restart?');
 			if (sure) {
 				this.init();
@@ -403,6 +404,7 @@ class Game {
 				this.start();
 			}
 			else
+			*/
 				toggle_state(0);
 		}
 		return;
