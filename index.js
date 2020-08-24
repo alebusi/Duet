@@ -165,7 +165,7 @@ class Painter {
 		ctx.clearRect(0, 0, window.vw, window.vh);
 		ctx.beginPath();
 		ctx.rect(0, 0, window.vw, window.vh);
-		ctx.fillStyle = '#965784';
+		ctx.fillStyle = '#000000';
 		ctx.fill();
 		ctx.closePath();
 		this.stroke_circle(game.orbit);
@@ -240,7 +240,7 @@ class Game {
 	init() {
 		this.orbit = new Circle(0.5 * window.vw, window.vh - 150, 100, 0, '#31bbfc');
 		this.wBall = new Circle(this.orbit.cx - this.orbit.rad, this.orbit.cy, 20, 180, '#ffffff');
-		this.bBall = new Circle(this.orbit.cx + this.orbit.rad, this.orbit.cy, 20, 0, '#000000');
+		this.bBall = new Circle(this.orbit.cx + this.orbit.rad, this.orbit.cy, 20, 0, '#FF0000');
 		window.balls = [this.wBall, this.bBall];
 		
 		this.ongoing = false;
