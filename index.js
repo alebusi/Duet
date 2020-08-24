@@ -253,7 +253,7 @@ class Game {
 		this.last_powerup = 0;
 		this.painting = 0;
 		this.kd = false;
-
+                /*
 		this.score = document.getElementById('score-board');
 		this.score_pos = this.scores.length;
 		var name = prompt('Enter name: ');
@@ -270,6 +270,9 @@ class Game {
 			show.style.display = 'none';
 			info.style.top = 30 + score_board.offsetHeight + 'px';
 		}
+		*/
+			score_board.style.left = '0px';
+			toggle_score();
 		info.style.color = 'white';
 
 		this.deg = 0;
