@@ -191,7 +191,7 @@ class Painter {
 		this.hurdle_factory = setInterval(function() {
 			var x = Math.random() * 200;
 			var width = 80 + Math.random() * 40;
-			hurdles.push(new Hurdle(x, width, '1c3a56', window.vw, window.vh));
+			hurdles.push(new Hurdle(x, width, 'ffffff', window.vw, window.vh));
 		}, 1000 - game.speed * 200);
 	}
 
