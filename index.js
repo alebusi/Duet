@@ -192,7 +192,7 @@ class Painter {
 			var x = Math.random() * 200;
 			var width = 80 + Math.random() * 40;
 			hurdles.push(new Hurdle(x, width, '1c3a56', window.vw, window.vh));
-		}, 2000); /* - game.speed * 200); */
+		}, 5000); /* - game.speed * 200); */
 	}
 
 	create_powerups() {
