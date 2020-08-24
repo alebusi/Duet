@@ -381,7 +381,7 @@ class Game {
 			return;
 		this.ongoing = true;
 		this.painter.create_hurdles();
-		this.painter.create_powerups();
+		/*this.painter.create_powerups();*/
 		this.painting = setInterval(function() {
 			self.painter.draw();
 		}, 30 - this.speed);
