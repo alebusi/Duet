@@ -417,7 +417,7 @@ class Game {
 			/* this.start(); */
 			setTimeout(function() {
 				self.start();
-			}, 3000);
+			}, 2000);
 		}
 		else if (!this.ongoing) {
 			setTimeout(function() {
