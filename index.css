@@ -12,13 +12,14 @@ body {
     position: fixed;
     right: 20px;
     top: 90vh;
-    padding: 10px 15px;
+    padding: 50px;
     background-color: #ff674d;
     border: none;
     border-radius: 5px;
     color: #fff;
     font-size: 1.3em;
     cursor: pointer;
+    opacity 0.5;
     transition: 0.3s;
 }
 
