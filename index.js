@@ -185,12 +185,18 @@ class Painter {
 		}
 	}
 
+	getRandomInt(min, max) {
+	// Questa funzione genera un numero intero random contenuto fra min e max inclusi
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+	
 	create_hurdles() {
 		var game = this.game;
 		var hurdles = game.hurdles;
 		this.hurdle_factory = setInterval(function() {
-			var x = Math.random() * 200;
-			var width = 80 + Math.random() * 40;
+			//var x = Math.random() * 200;
+			var x = getRandomInt(0,2)/2;
+			var width = 80; // + Math.random() * 40;
 			hurdles.push(new Hurdle(x, width, 'ffffff', window.vw, window.vh));
 		}, 1000 - game.speed * 200);
 	}
