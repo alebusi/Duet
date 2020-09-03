@@ -469,7 +469,7 @@ var info = document.getElementById('info');
 
 function toggle_state(evt) {
 	if (evt == 0) {
-		pause.innerHTML = 'Restart';
+		pause.innerHTML = '';
 		info.style.color = 'black';
 		return;
 	}
