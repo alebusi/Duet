@@ -388,6 +388,7 @@ class Game {
 		}, 30 - this.speed);
 	}
 	stop() {
+		document.getElementById('pause').style.zIndex = 1;
 		this.ongoing = false;
 		clearInterval(this.painter.hurdle_factory);
 		clearInterval(this.painting);
@@ -419,6 +420,7 @@ class Game {
 			setTimeout(function() {
 				self.start();
 			}, 2000);
+			document.getElementById('pause').style.zIndex = -1;
 		}
 		else if (!this.ongoing) {
 			setTimeout(function() {
