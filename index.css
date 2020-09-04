@@ -32,6 +32,18 @@ body {
 	left: 20px;
 }
 
+#punteggio {
+    color: white;
+    background-color: black;
+    font-size: 120px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 #score-board {
 	position: fixed;
 	left: 20px;
