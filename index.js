@@ -426,6 +426,7 @@ class Game {
 				self.start();
 			}, 2000);
 			document.getElementById('pause').style.zIndex = -1;
+			document.getElementById('punteggio').style.zIndex = -1;
 		}
 		else if (!this.ongoing) {
 			setTimeout(function() {
