@@ -109,6 +109,7 @@ class Hurdle {
 			this.remove();
 	}
 	remove() {
+		game.punteggio +=1;
 		game.hurdles.splice(game.hurdles.indexOf(this), 1);
 		game.change_score(1);
 	}
@@ -257,6 +258,8 @@ class Game {
 		
 		this.score = document.getElementById('score-board');
 		this.score_pos = this.scores.length;
+		
+		this.punteggio = 0;
 		/*
 		var name = prompt('Enter name: ');
 		while (name == '' || name == null)
@@ -303,7 +306,7 @@ class Game {
 		tbody.innerHTML = '<tr><td>Name</td><td>Score</td></tr>';
 		for (var tr=0; tr<trs.length; tr++)
 			tbody.appendChild(this.make_score(trs[tr]));
-
+                
 		if (val % 5 == 0 && val > 0) {
 			this.speed += 1;
 			clearInterval(this.painting);
@@ -389,6 +392,8 @@ class Game {
 	}
 	stop() {
 		document.getElementById('pause').style.zIndex = 1;
+		document.getElementById('punteggio').style.zIndex = 1;
+		document.getElementById('punteggio').innerHTML = game.punteggio;
 		this.ongoing = false;
 		clearInterval(this.painter.hurdle_factory);
 		clearInterval(this.painting);
